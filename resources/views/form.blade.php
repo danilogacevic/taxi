@@ -1,7 +1,25 @@
 @extends('layouts.index')
 
 @section('styles')
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    {{--<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">--}}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/css/tempusdominus-bootstrap-4.min.css" />
+
+    <style class="">
+        .dropdown-menu {
+        width: 190% !important;
+        }
+
+        .bootstrap-datetimepicker-widget .timepicker-hour, .bootstrap-datetimepicker-widget .timepicker-minute, .bootstrap-datetimepicker-widget .timepicker-second {
+            color: black;
+        }
+        .bootstrap-datetimepicker-widget table td {
+            color: black;
+        }
+        .table>thead>tr>th {
+            color:black;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -59,14 +77,25 @@
                         <label for="dropoff-address">DROP OFF address</label>
                         <input type="text" class="form-control" name="dropoff-address">
                     </div>
-                    <div class="form-group">
-                        <label for="time">Time</label>
-                        <input type="time" class="form-control" name="time">
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date</label>
-                        <input type="text" name="date"  id="datepicker" class="form-control">
+                    {{--<div class="form-group">--}}
+                        {{--<label for="time">Time</label>--}}
+                        {{--<input type="time" class="form-control" name="time">--}}
+                    {{--</div>--}}
+                    {{--<div class="form-group">--}}
+                        {{--<label for="date">Date</label>--}}
+                        {{--<input type="text" name="date"  id="datepicker" class="form-control">--}}
 
+                    {{--</div>--}}
+
+                    <div class="form-group">
+                        <label for="time">Pick date and time</label>
+                        <div class="input-group date" id="datetimepicker6" data-target-input="nearest">
+
+                            <div class="input-group-append" data-target="#datetimepicker6" data-toggle="datetimepicker">
+                                <input type="text" class="form-control " data-target="#datetimepicker6"/>
+                                {{--<div class="input-group-text"><i class="fa fa-calendar"></i></div>--}}
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="flight-number">Flight number</label>
@@ -137,8 +166,11 @@
 
 @section('scripts')
 
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    {{--<script src="//code.jquery.com/jquery-1.10.2.js"></script>--}}
+    {{--<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>--}}
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <script class="">
         // Odabir jezika
@@ -155,9 +187,20 @@
 
         });
 
-        $(function() {
-            $("#datepicker").datepicker();
-        });
+        // $(function() {
+        //     $("#datepicker").datepicker();
+        // });
+
+        $(function () {
+            $('#datetimepicker6').datetimepicker({
+                defaultDate: "",
+                disabledDates: [
+                    moment("12/25/2013"),
+                    new Date(2013, 11 - 1, 21),
+                    "11/22/2013 00:53"
+                ]
+            })
+            });
 
     </script>
 
