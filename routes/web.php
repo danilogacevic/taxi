@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/form',function(){
-    return view('form');
-})->name('form');
+//Route::get('/form',function(){
+//    return view('form');
+//})->name('form');
+
+Route::post('/booking','TaxiController@booking');

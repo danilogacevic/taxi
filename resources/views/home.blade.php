@@ -1,5 +1,54 @@
 @extends('layouts.index')
 
+@section('styles')
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/css/tempusdominus-bootstrap-4.min.css" />
+
+    <style class="">
+
+        #booking {
+            padding: 0% 15%;
+        }
+
+        .form-group {
+            padding-left: 10%;
+        }
+
+        select.form-control {
+            width: auto;
+        }
+        input.form-control {
+            width: 50% !important;
+        }
+
+        textarea.form-control {
+            width: 50% !important;
+        }
+
+        input#vreme {
+            width: 100% !important;
+        }
+
+        #booking label {
+            color: yellow;
+        }
+        .dropdown-menu {
+            width: 190% !important;
+        }
+
+        .bootstrap-datetimepicker-widget .timepicker-hour, .bootstrap-datetimepicker-widget .timepicker-minute, .bootstrap-datetimepicker-widget .timepicker-second {
+            color: black;
+        }
+        .bootstrap-datetimepicker-widget table td {
+            color: black;
+        }
+        .table>thead>tr>th {
+            color:black;
+        }
+    </style>
+
+@endsection
+
 @section('content')
 
     <!-- Hero section starts-->
@@ -89,7 +138,7 @@
                         <cite class="text-left"> <span class="hero-cite-name">adam steve</span> founder of <span>madebywahid.com</span> </cite>
                     </blockquote>
 
-                    <a href="{{route('form')}}" class=""><button class="buy-now btn btn-block custom-button">order your copy</button></a>
+                    <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">order your copy</a>
 
                 </div>
             </div><!-- End: .container-custom -->
@@ -153,95 +202,156 @@
                 <div class="col-sm-12 col-md-10 col-md-offset-1 wow fadeInUp">
                     <div id="what-you-learn-carousel" class="carousel slide carousel-fade clearfix" data-ride="carousel" data-interval="false">
                         <div class="row no-gutter">
-                            <div class="col-sm-6">
-                                <div class="book-page-1 papers-1">
-                                    <div class="book-page-1-inner ">
-                                        <!-- Indicators -->
-                                        <ol class="carousel-indicators">
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="0" class="active">
-                                                Learn iOS design
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="1">
-                                                Designing for iOS 9
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="2">
-                                                Learn Colors
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="3">
-                                                Learn Typography
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="4">
-                                                Getting your money
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="5">
-                                                Why clients don't pay?
-                                            </li>
-                                            <li data-target="#what-you-learn-carousel" data-slide-to="6">
-                                                Covering your ass.
-                                            </li>
+                            <form id="booking" method="POST" action="/booking">
+                                @csrf
+                                <div class="form-group">
+                                    <label for="pick_up">Pick up <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
+                                    <select class="form-control"  name="pick_up" required>
+                                        <option value="Podgorica_airport">Podgorica Airoport</option>
+                                        <option value="Tivat_airport">Tivat Airport</option>
+                                        <option value="other">Other</option>
 
-                                        </ol>
-                                    </div>
+                                    </select>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <label for="drop_off">Drop off</label>
+                                    <select class="form-control"  name="drop_off">
+                                        <option value="Andrijevica">Andrijevica</option>
+                                        <option value="Bar">Bar</option>
+                                        <option value="Berane">Berane</option>
+                                        <option value="Bijelo Polje">Bijelo Polje</option>
+                                        <option value="Budva">Budva</option>
+                                        <option value="Cetinje">Cetinje</option>
+                                        <option value="Danilovgrad">Danilovgrad</option>
+                                        <option value="Gusinje">Gusinje</option>
+                                        <option value="Herceg Novi">Herceg Novi</option>
+                                        <option value="Kolasin">Kolasin</option>
+                                        <option value="Kotor">Kotor</option>
+                                        <option value="Mojkovac">Mojkovac</option>
+                                        <option value="Niksic">Nikšić</option>
+                                        <option value="Petnjica">Petnjica</option>
+                                        <option value="Plav">Plav</option>
+                                        <option value="Pluzine">Plužine</option>
+                                        <option value="Pljevlja">Pljevlja</option>
+                                        <option value="Podgorica">Podgorica</option>
+                                        <option value="Rozaje">Rožaje</option>
+                                        <option value="Savnik">Šavnik</option>
+                                        <option value="Tivat">Tivat</option>
+                                        <option value="Ulcinj">Ulcinj</option>
+                                        <option value="Zabljak">Žabljak</option>
+                                        <option value="Dubrovnik">Dubrovnik</option>
+                                        <option value="Skadar">Shkoder</option>
+                                        <option value="other">Other</option>
 
-                            <div class="col-sm-6">
-                                <div class="book-page-2 papers-2">
-                                    <div class="book-page-2-inner ">
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner" role="listbox">
-                                            <div class="item active animated fadeInUp delay-2">
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropoff-address">DROP OFF address</label>
+                                    <input type="text" class="form-control" name="dropoff-address">
+                                </div>
+                                {{--<div class="form-group">--}}
+                                {{--<label for="time">Time</label>--}}
+                                {{--<input type="time" class="form-control" name="time">--}}
+                                {{--</div>--}}
+                                {{--<div class="form-group">--}}
+                                {{--<label for="date">Date</label>--}}
+                                {{--<input type="text" name="date"  id="datepicker" class="form-control">--}}
 
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
+                                {{--</div>--}}
 
-                                            <div class="item animated fadeInUp delay-2">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-                                                <p>ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
+                                <div class="form-group">
+                                    <label for="time">Pick date and time <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
+                                    <div class="input-group date" id="datetimepicker6" data-target-input="nearest">
 
-                                            <div class="item animated fadeInUp delay-2">
-
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
-
-                                            <div class="item animated fadeInUp delay-2">
-
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
-
-                                            <div class="item animated fadeInUp delay-2">
-
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
-
-                                            <div class="item animated fadeInUp delay-2">
-
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
-
-                                            <div class="item animated fadeInUp delay-2">
-
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                                <p> Then, you'll learn about the more advanced techniques introduced in iOS for transitional interfaces and physics animations combined with gestures.</p>
-                                                <p>The simplification of UI design enables the focus in animation. In this lesson, you'll learn the basic techniques to animations such as slide, scale and color transitions.</p>
-                                            </div>
-
+                                        <div class="input-group-append" data-target="#datetimepicker6" data-toggle="datetimepicker">
+                                            <input type="text" class="form-control" id="vreme" name="date-time" data-target="#datetimepicker6" required /><i></i>
+                                            {{--<div class="input-group-text"><i class="fa fa-calendar"></i></div>--}}
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="form-group">
+                                    <label for="flight-number">Flight number</label>
+                                    <input type="text" class="form-control" name="flight-number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="num-of-passengers">Number of passengers</label>
+                                    <select class="form-control" id="exampleSelect2" name="num-of-passengers">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="num-of-baggage">Number of baggage</label>
+                                    <select class="form-control" id="exampleSelect2" name="num-of-baggage">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="transfer-class">Transfer class</label>
+                                    <select class="form-control" id="exampleSelect2" name="transfer-class">
+                                        <option value="Eco">Eco</option>
+                                        <option value="Business">Business</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Name  <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
+                                    <input type="text" class="form-control" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email  <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
+                                    <input type="email" class="form-control" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone-number">Phone number</label>
+                                    <input type="text" class="form-control" name="phone-number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="notes">Notes</label>
+                                    <textarea class="form-control" id="exampleTextarea" rows="3" name="notes"></textarea>
+                                </div>
+
+                                <fieldset class="form-group">
+                                    <legend></legend>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                            Option one is this and that&mdash;be sure to include why it's great
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                                            Option two can be something else and selecting it will deselect option one
+                                        </label>
+                                    </div>
+                                    <div class="form-check disabled">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                            Option three is disabled
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        Check me out
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
 
                         </div>
 
@@ -1191,5 +1301,39 @@
     </section>
     <!-- CTA section ends -->
 
+
+@endsection
+
+@section('scripts')
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha18/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script class="">
+
+        $(document).on('change', 'select', function() {
+
+            let name =  $(this).attr('name');
+
+            if($(this).val() == 'other') {
+                $(this).replaceWith(`<input type="text" class="form-control" name="${name}" value="ehhed" placeholder="Enter desired location">`); // the selected options’s value
+            }
+
+
+        });
+
+
+        $(function () {
+            $('#datetimepicker6').datetimepicker({
+                defaultDate: "",
+                disabledDates: [
+                    moment("12/25/2013"),
+                    new Date(2013, 11 - 1, 21),
+                    "11/22/2013 00:53"
+                ]
+            })
+        });
+
+    </script>
 
 @endsection
