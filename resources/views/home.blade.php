@@ -128,14 +128,12 @@
 
 
                 <div class="features clearfix wow fadeInUp" data-wow-delay="0.3s">
-                    <h3 class="text-center">Master the Art of Business</h3>
+
                     <h1 class="text-center">Podcast 101</h1>
-                    <h5 class="text-center">by Wahid Polin, #1 bestselling business author</h5>
                     <blockquote>
-                        A masterpiece. This is the best book I everyone interested in business. Lorem ipsum dolor sit amet, consectetur adipisicing elit, Sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                        <cite class="text-left"> <span class="hero-cite-name">adam steve</span> founder of <span>madebywahid.com</span> </cite>
+                        We specialize in airport taxi transfers to and from Podgorica Airport with the accent on a courteous, professional and personal service at affordable prices. 24  hours a day, 7 days a week.
+                        You will get the cheapest possible price for your transportation from Podgorica airport, and most importantly, regular, licensed taxi. Reservations are not charged , just the actual transfer.
+
                     </blockquote>
 
                     <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">order your copy</a>
@@ -145,6 +143,16 @@
         </div><!-- End: .details -->
     </section>
     <!-- Hero section ends-->
+
+    {{--Thank you message after successful booking --}}
+
+    @if(session('message'))
+
+        <div style='position:fixed;top:60%;left:56%;font-weight:bold;font-size: 14px;' id='taxibooked'>{{session('message')}} <h3 class="" style="color: #30ff50;">You booked your vehicle !!</h3></div>
+
+
+
+    @endif
 
     <!-- as seen on section starts-->
     <section id="as-seen-on" class="as-seen-on page">
@@ -205,8 +213,8 @@
                             <form id="booking" method="POST" action="/booking">
                                 @csrf
                                 <div class="form-group">
-                                    <label for="pick_up">Pick up <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
-                                    <select class="form-control"  name="pick_up" required>
+                                    <label for="pick-up">Pick up <i class="fa fa-asterisk" style="color:#ff0000; font-size:9px; vertical-align:top;"></i></label>
+                                    <select class="form-control"  name="pick-up" required>
                                         <option value="Podgorica_airport">Podgorica Airoport</option>
                                         <option value="Tivat_airport">Tivat Airport</option>
                                         <option value="other">Other</option>
@@ -214,8 +222,8 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label for="drop_off">Drop off</label>
-                                    <select class="form-control"  name="drop_off">
+                                    <label for="drop-off">Drop off</label>
+                                    <select class="form-control"  name="drop-off">
                                         <option value="Andrijevica">Andrijevica</option>
                                         <option value="Bar">Bar</option>
                                         <option value="Berane">Berane</option>
@@ -866,66 +874,156 @@
 
                     <div class="col-md-6 col-md-offset-1 col-md-push-5 hidden-xs">
                         <figure class="bonus-img img-1 bonus-card">
-                            <img src="images/bonuses/bonus-img-2.png" class="img-responsive" alt='published-img'>
+                            <img src="images/destinations/durmitor.jpg" class="img-responsive" alt='published-img'>
                         </figure>
                     </div>
 
                     <div class="col-md-5 col-md-pull-7">
-                        <h4 class="text-center">Bonus #1</h4>
-                        <h2 class="text-center">Loem ipsum dolor sit amet</h2>
+                        <h2 class="text-center">Žabljak</h2>
                         <div class="bonus-span text-center">
                             <span class="bonus-price">$17</span><span class="bonus-free">free</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor.</p>
+                        <p>Centered around the mountain village of Žabljak, the thickly forested Durmitor National Park is a paradise for nature lovers and outdoor enthusiasts. Situated in the Dinaric Alps, the park includes the high-altitude peaks of the Durmitor Massif, 18 glacial lakes and the Tara River, home to the world’s second deepest gorge.</p>
+                        <p>18 glacial lakes and the Tara River, home to the world’s second deepest gorge. Skiing and snowboarding are the main activities in winter while whitewater rafting, camping and hiking attract visitors in the warm-weather season. The park’s wildlife includes 163 bird species, mammals ranging from wild boars to brown bears, and the most varieties of butterflies found anywhere in Europe.</p>
                     </div>
                 </div>
 
                 <div class="bonus clearfix">
                     <div class="col-md-7 hidden-xs">
                         <figure class="bonus-img img-1 img-stack">
-                            <img src="images/bonuses/img-stack.png" class="img-responsive" alt='published-img'>
+                            <img src="images/destinations/biogradska.jpg" class="img-responsive" alt='published-img'>
                         </figure>
 
                     </div>
                     <div class="col-md-5">
-                        <h4 class="text-center">Bonus #2</h4>
-                        <h2 class="text-center">Loem ipsum dolor sit amet</h2>
+
+                        <h2 class="text-center">Biogradska gora</h2>
                         <div class="bonus-span text-center">
                             <span class="bonus-price">$17</span><span class="bonus-free">free</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor.</p>
+                        <p>Wedged between the Tara and Lim rivers in central Montenegro,
+                            the Biogradska Gora National Park features shimmering lakes,
+                            swift-running streams, lush green meadows and one of the few
+                            remaining primeval forests in Europe.
+                        </p>
+                        <p>Although it’s one of the
+                            smallest of Montenegro’s national parks, Biogradska Gora offers
+                            the greatest diversity when it comes to flora and fauna, including
+                            500-year-old trees.</p>
+                        <p>Most visitors head to Lake Biograd,
+                            a large glacial located in the heart of the park.
+                            The recent development of the nearby town of Kolašin makes it a
+                            popular base for tours of the park.</p>
                     </div>
                 </div>
                 <div class="bonus clearfix">
 
                     <div class="col-md-6 col-md-offset-1 col-md-push-5 hidden-xs">
                         <figure class="bonus-img bonus-browser">
-                            <img src="images/bonuses/bonus-img.png" class="img-responsive" alt='published-img'>
+                            <img src="images/destinations/kotor.jpg" class="img-responsive" alt='published-img'>
                         </figure>
                     </div>
 
                     <div class="col-md-5 col-md-pull-7">
-                        <h4 class="text-center">Bonus #1</h4>
-                        <h2 class="text-center">Loem ipsum dolor sit amet</h2>
+
+                        <h2 class="text-center">Kotor</h2>
                         <div class="bonus-span text-center">
                             <span class="bonus-price">$17</span><span class="bonus-free">free</span>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod dolor.</p>
+                        <p>Considered one of the best preserved medieval towns on the Adriatic coast, the fortified town of Kotor is tucked against the steep mountains surrounding the deep channels of the Bay of Kotor. While Kotor’s architecture reflects the various empires that ruled over the region, it is best known for its Venetian-flavored Old Town, which is dominated by the 12th-century Cathedral of Saint Tryphon.</p>
+                        <p>The cathedral’s carved stone altar is an exquisite example of the stonemasonry skills Kotor was known for in the Middle Ages. Treks up the upper town walls to Kotor’s hilltop fortress reward hardy hikers with breathtaking views of the city and deep-water bay.</p>
+                    </div>
+                </div>
+                <div class="bonus clearfix">
+                    <div class="col-md-7 hidden-xs">
+                        <figure class="bonus-img img-1 img-stack">
+                            <img src="images/destinations/lovcen.jpg" class="img-responsive" alt='published-img'>
+                        </figure>
+
+                    </div>
+                    <div class="col-md-5">
+
+                        <h2 class="text-center">Lovćen</h2>
+                        <div class="bonus-span text-center">
+                            <span class="bonus-price">$17</span><span class="bonus-free">free</span>
+                        </div>
+                        <p>One of the most striking natural features in Montenegro, soaring Mount Lovcen is capped by two mammoth peaks of granite. Part of the Mount Loven National Park, the mountain inspired Montenegro’s name and is a symbol of national pride. Climbs to the top of Mount Lovcen offer panoramic vistas of the fortified city of Kotor, the surrounding hills and the Bay of Kotor.
+                        </p>
+                        <p>With its circular viewing platform, the nearby Njegoš Mausoleum is a destination for sightseers as well as for those who want to pay their respects to the poet and philosopher buried there. Petar II Petrovic-Njegoš is beloved for writing “The Mountain Wreath,” Montenegro’s national epic poem.</p>
+
+                    </div>
+                </div>
+                <div class="bonus clearfix">
+
+                    <div class="col-md-6 col-md-offset-1 col-md-push-5 hidden-xs">
+                        <figure class="bonus-img bonus-browser">
+                            <img src="images/destinations/ostrog.jpg" class="img-responsive" alt='published-img'>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-5 col-md-pull-7">
+
+                        <h2 class="text-center">Ostrog</h2>
+                        <div class="bonus-span text-center">
+                            <span class="bonus-price">$17</span><span class="bonus-free">free</span>
+                        </div>
+                        <p>Situated high up in the large rock of Ostroška Greda, the Ostrog Monastery is the country’s most unusual architectural site and a major Christian pilgrimage destination. The entire monastery was carved out of a cave in a nearly vertical mountain cliff with only the whitewashed façade left visible.</p>
+                        <p>Built in the 17th century as a refuge against the Ottoman Empire, it houses the remains of its founder, Sveti Vasilje, who was sainted after his death in 1671. The monastery includes two inner cave churches ornamented by frescoes, some of which were painted directly on the rock walls.</p>
+                    </div>
+                </div>
+                <div class="bonus clearfix">
+                    <div class="col-md-7 hidden-xs">
+                        <figure class="bonus-img img-1 img-stack">
+                            <img src="images/destinations/perast.jpg" class="img-responsive" alt='published-img'>
+                        </figure>
+
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="text-center">Perast</h2>
+                        <div class="bonus-span text-center">
+                            <span class="bonus-price">$17</span><span class="bonus-free">free</span>
+                        </div>
+                        <p>Located to the northwest of Kotor and sharing the same gorgeous fjord-like bay, pretty Perast is a small town notable for it stone-crafted villas and historic churches. Two of the city’s picturesque chapels are situated on tiny islets, Our Lady of the Rocks and St. George.
+                        </p>
+                        <p>Back onshore, the Church of St. Nikola is worth a visit for the pleasant views that a climb up to the belfry offers of the town and bay. While there’s no beach in this bay-front city, the stone jetties along the waterfront are popular places for sunbathing and relaxing.</p>
+
+                    </div>
+                </div>
+                <div class="bonus clearfix">
+
+                    <div class="col-md-6 col-md-offset-1 col-md-push-5 hidden-xs">
+                        <figure class="bonus-img bonus-browser">
+                            <img src="images/destinations/porto.jpg" class="img-responsive" alt='published-img'>
+                        </figure>
+                    </div>
+
+                    <div class="col-md-5 col-md-pull-7">
+
+                        <h2 class="text-center">Porto Montenegro</h2>
+                        <div class="bonus-span text-center">
+                            <span class="bonus-price">$17</span><span class="bonus-free">free</span>
+                        </div>
+                        <p>Porto Montenegro today represents a real example of one of the most beautiful destinations in Montenegro. Luxury packaged in a beautiful Mediterranean style, Porto Montenegro is today one of the most prestigious marina on the Adriatic Sea.</p>
+                        <p>Primary made for superyachts and rich billionaires who will have one new destination where will enjoy in peaceful atmosphere and great nature. Today, Porto Montenegro is a major tourist attraction in Montenegro, but not only for the rich tourists, but for everyone. Affordable prices will surprise you in this luxurious complex. You will enjoy the affordable prices of food and drinks, with a view to the most luxurious yachts.</p>
+                    </div>
+                </div>
+                <div class="bonus clearfix">
+                    <div class="col-md-7 hidden-xs">
+                        <figure class="bonus-img img-1 img-stack">
+                            <img src="images/destinations/sveti.jpg" class="img-responsive" alt='published-img'>
+                        </figure>
+
+                    </div>
+                    <div class="col-md-5">
+
+                        <h2 class="text-center">Sveti Stefan</h2>
+                        <div class="bonus-span text-center">
+                            <span class="bonus-price">$17</span><span class="bonus-free">free</span>
+                        </div>
+                        <p>Sveti Stefan is a unique place along the Budva Riviera. It stands on a rocky island crammed full of terracotta-roofed houses. A narrow isthmus connects it with the mainland. From the 15th century Sveti Stefan housed a simply fishing community. In the 1950s someone had the idea to nationalize the tiny village. The residents were evicted and Sveti Stefan was transformed into a luxury town-hotel.
+                        </p>
+                        <p> Among its guests were Marilyn Monroe, Sophia Loren and Kirk Douglas.In 2010, Sveti Stefan Hotel reopened its doors once again as a member of the Aman Resorts. As beautiful and unique as Stevi Stefan is, there’s one major drawback: You can’t actually go into the village unless you stay there as a hotel guest.</p>
+
                     </div>
                 </div>
             </div><!-- End: .row -->
@@ -1333,6 +1431,8 @@
                 ]
             })
         });
+
+        $("#taxibooked").delay(3000).fadeOut();
 
     </script>
 

@@ -15,6 +15,8 @@ class TaxiController extends Controller
 
         Mail::to('danilogacevic.pg@gmail.com')->send(new TaxiBooked($request->all()));
 
+        Session::flash('message', 'You have booked your vehicle');
+
         return redirect()->back();
 
     }
