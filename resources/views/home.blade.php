@@ -136,7 +136,7 @@
 
                     </blockquote>
 
-                    <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">order your copy</a>
+                    <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">BOOK NOW</a>
 
                 </div>
             </div><!-- End: .container-custom -->
