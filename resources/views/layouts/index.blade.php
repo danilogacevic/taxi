@@ -73,12 +73,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#hero">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a data-scroll href="#book-trailer">Trailer</a></li>
+                        <li><a data-scroll href="#book-trailer">Pricing</a></li>
                         <li><a data-scroll href="#what-you-learn">book your vehicle</a></li>
-                        <li><a data-scroll href="#chapters">Chapters</a></li>
-                        <li><a data-scroll href="#free-chapter">free chapter</a></li>
+                        {{--<li><a data-scroll href="#book-facts">facts</a></li>--}}
+                        {{--<li><a data-scroll href="#chapters">Chapters</a></li>--}}
+                        {{--<li><a data-scroll href="#free-chapter">free chapter</a></li>--}}
+                        <li><a data-scroll href="#video">video</a></li>
                         <li><a data-scroll href="#gallery">gallery</a></li>
-                        <li><a data-scroll href="#reviews">reviews</a></li>
                         <li><a data-scroll href="#read-anywhere">read</a></li>
                         <li><a data-scroll href="#bonuses">top destinations</a></li>
                         <li><a data-scroll href="#pricing">pricing</a></li>

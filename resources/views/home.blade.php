@@ -11,7 +11,7 @@
         }
 
         .form-group {
-            padding-left: 10%;
+            margin-left: 10%;
         }
 
         select.form-control {
@@ -30,7 +30,7 @@
         }
 
         #booking label {
-            color: yellow;
+            color: #000000;
         }
         .dropdown-menu {
             width: 190% !important;
@@ -44,6 +44,18 @@
         }
         .table>thead>tr>th {
             color:black;
+        }
+
+        @media (min-width: 350px) {
+
+            .bootstrap-datetimepicker-widget.dropdown-menu {
+                left:-25% !important;
+                width:162% !important;
+            }
+            
+            #book-facts {
+                display: block;
+            }
         }
     </style>
 
@@ -72,57 +84,57 @@
                     </div>
                 </div>
                 <div class="book-buttons">
-                    <button class="flip-book book-button wow fadeInLeft" data-wow-delay="0.3s">
-                        <i class="fa fa-exchange flip-icon"></i>
-                        <span>flip to back</span>
-                    </button>
+                    {{--<button class="flip-book book-button wow fadeInLeft" data-wow-delay="0.3s">--}}
+                        {{--<i class="fa fa-exchange flip-icon"></i>--}}
+                        {{--<span>flip to back</span>--}}
+                    {{--</button>--}}
 
-                    <div class="enlarge wow fadeInLeft" data-wow-delay="0.6s">
-                        <a class="front-img popup" href="images/book/book-front-large.png" data-effect="mfp-move-horizontal"></a>
-                        <a class="back-img popup" href="images/book/book-back-large.png" data-effect="mfp-move-horizontal"></a>
-                        <button class="book-button">
-                            <i class="fa fa-expand"></i>
-                            <span>enlarge</span>
-                        </button>
-                    </div>
+                    {{--<div class="enlarge wow fadeInLeft" data-wow-delay="0.6s">--}}
+                        {{--<a class="front-img popup" href="images/book/book-front-large.png" data-effect="mfp-move-horizontal"></a>--}}
+                        {{--<a class="back-img popup" href="images/book/book-back-large.png" data-effect="mfp-move-horizontal"></a>--}}
+                        {{--<button class="book-button">--}}
+                            {{--<i class="fa fa-expand"></i>--}}
+                            {{--<span>enlarge</span>--}}
+                        {{--</button>--}}
+                    {{--</div>--}}
 
                     <!-- look inside button -->
-                    <ul id="inline-popups" class="look-inside wow fadeInLeft" data-wow-delay="0.9s">
-                        <li>
-                            <i class="fa fa-search-plus"></i>
-                            <a href="#test-popup" data-effect="mfp-move-horizontal">look inside</a></li>
-                    </ul>
+                    {{--<ul id="inline-popups" class="look-inside wow fadeInLeft" data-wow-delay="0.9s">--}}
+                        {{--<li>--}}
+                            {{--<i class="fa fa-search-plus"></i>--}}
+                            {{--<a href="#test-popup" data-effect="mfp-move-horizontal">look inside</a></li>--}}
+                    {{--</ul>--}}
 
                     <!-- Look Inside Content -->
-                    <div id="test-popup" class="white-popup mfp-with-anim mfp-hide">
-                        <div class="popup-header">
-                            <span class="popup-title">Podcast 101 |</span><span> Master The Art of Conversation and Business</span>
-                        </div>
-                        <div class="white-popup-inner">
-                            <div class="book-wrapper text-center">
-                                <div class="popup-book-page">
-                                    <img src="images/book/book-front-large.png" class="img-responsive" alt='published-img'>
-                                </div>
-                                <div class="popup-book-page">
-                                    <img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>
-                                </div>
-                                <div class="popup-book-page">
-                                    <img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>
-                                </div>
-                                <div class="popup-book-page">
-                                    <img src="images/book/book-back-large.png" class="img-responsive" alt='published-img'>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {{--<div id="test-popup" class="white-popup mfp-with-anim mfp-hide">--}}
+                        {{--<div class="popup-header">--}}
+                            {{--<span class="popup-title">Podcast 101 |</span><span> Master The Art of Conversation and Business</span>--}}
+                        {{--</div>--}}
+                        {{--<div class="white-popup-inner">--}}
+                            {{--<div class="book-wrapper text-center">--}}
+                                {{--<div class="popup-book-page">--}}
+                                    {{--<img src="images/book/book-front-large.png" class="img-responsive" alt='published-img'>--}}
+                                {{--</div>--}}
+                                {{--<div class="popup-book-page">--}}
+                                    {{--<img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>--}}
+                                {{--</div>--}}
+                                {{--<div class="popup-book-page">--}}
+                                    {{--<img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>--}}
+                                {{--</div>--}}
+                                {{--<div class="popup-book-page">--}}
+                                    {{--<img src="images/book/book-back-large.png" class="img-responsive" alt='published-img'>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
 
 
 
 
-                    <button id="playpausebtn" class="listen book-button wow fadeInLeft" tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="bottom" data-content="You can put your audible book excerpt here" data-wow-delay="1.2s">
-                        <i class="fa fa-play-circle-o"></i>
-                        <span>Listen</span>
-                    </button>
+                    {{--<button id="playpausebtn" class="listen book-button wow fadeInLeft" tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="bottom" data-content="You can put your audible book excerpt here" data-wow-delay="1.2s">--}}
+                        {{--<i class="fa fa-play-circle-o"></i>--}}
+                        {{--<span>Listen</span>--}}
+                    {{--</button>--}}
                 </div>
 
 
@@ -148,7 +160,7 @@
 
     @if(session('message'))
 
-        <div style='position:fixed;top:60%;left:56%;font-weight:bold;font-size: 14px;' id='taxibooked'>{{session('message')}} <h3 class="" style="color: #30ff50;">You booked your vehicle !!</h3></div>
+        <div style='position:fixed;top:60%;left:56%;font-weight:bold;font-size: 14px;' id='taxibooked'><h3 class="" style="color: #30ff50;">{{session('message')}} </h3></div>
 
 
 
@@ -179,23 +191,38 @@
     <!-- book trailer -->
     <section id="book-trailer" class="book-trailer page">
         <div class="container">
-            <div class="trailer-text text-center">
-                <a class="popup-vimeo wow fadeInUp" href="//vimeo.com/45830194">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
-                            <g>
-                                <path fill="#fff" stroke="none" stroke-width="2" stroke-miterlimit="10" d="M53.92,10.081
-                                                    c12.107,12.105,12.107,31.732,0,43.838c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838
-                                                    C22.186-2.027,41.813-2.027,53.92,10.081z" />
-                                <polygon fill="#e9ba00" stroke="none" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="21,16 52,32 21,48   " />
 
-                            </g>
-                        </svg>
-                </a>
-                <h3 class="wow fadeInUp">watch the book trailer</h3>
-            </div>
         </div>
     </section>
     <!-- book trailer ends -->
+
+    <!-- book facts start -->
+    <section id="book-facts" class="book-facts page" style="display: none;">
+        <div class="container wow fadeInUp">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h3 class="text-center">Here are some facts about the book</h3>
+                </div>
+                <div class="col-sm-12 col-md-2">
+                    <div class="fact" style="padding: 0px;max-width:100%;height: auto;">
+                        <img src="images/pricing_mobile.jpg" alt="" class="" width="100%" height="100%">
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-2">
+                    <div class="fact" style="padding: 0px;max-width:100%;height: auto;">
+                        <span class="fact-number">94%</span>
+                        <span>on Goodreads</span>
+                    </div>
+                </div>
+
+
+
+
+            </div><!-- End: .row -->
+        </div><!-- End: .container-->
+    </section>
+    <!-- book facts ends -->
 
     <!-- what you will learn -->
     <section id="what-you-learn" class="what-you-learn page">
@@ -352,13 +379,14 @@
                                         </label>
                                     </div>
                                 </fieldset>
-                                <div class="form-check">
+                                <div class="form-group">
                                     <label class="form-check-label">
                                         <input type="checkbox" class="form-check-input">
                                         Check me out
                                     </label>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <div class="form-group"><button type="submit" class="btn btn-primary">Submit</button></div>
+
                             </form>
 
                         </div>
@@ -370,221 +398,7 @@
     </section>
     <!-- what you will learn ends -->
 
-    <!-- book facts start -->
-    <section id="book-facts" class="book-facts page">
-        <div class="container wow fadeInUp">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h3 class="text-center">Here are some facts about the book</h3>
-                </div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">1000</span>
-                        <span>copies sold</span>
-                    </div>
-                </div>
 
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">94%</span>
-                        <span>on Goodreads</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">5.00</span>
-                        <span>amazon ratings</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">200</span>
-                        <span>pages</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">3.5</span>
-                        <span>hour read</span>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-2">
-                    <div class="fact">
-                        <span class="fact-number">200</span>
-                        <span>pages</span>
-                    </div>
-                </div>
-            </div><!-- End: .row -->
-        </div><!-- End: .container-->
-    </section>
-    <!-- book facts ends -->
-
-    <!-- chapters-->
-    <section id="chapters" class="chapters page">
-        <div class="container wow fadeInUp">
-            <div class="row">
-                <div class="main-heading clearfix">
-                    <div class="col-md-12 text-center">
-                        <h1 class="text-center">Chapters</h1>
-                        <h3 class="text-center">All Taskers are screened for quality and reliablity.</h3>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 1</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 1</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 2</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 2</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 3</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 3</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 4</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 4</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 5</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 5</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-6 col-md-4">
-                    <div class="chapter text-center">
-                        <div class="front">
-                            <img src="http://placehold.it/112X82" alt='published-img'>
-                            <h3>Chapter 6</h3>
-                            <h4>Getting started</h4>
-                        </div>
-                        <div class="back">
-                            <div class="chapter-back-top clearfix">
-                                <img src="http://placehold.it/112X82" alt='published-img'>
-                                <h3>Chapter 6</h3>
-                                <h4>Getting started</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- End: .row -->
-        </div><!-- End: .container-->
-    </section>
-    <!-- end of chapters-->
-
-    <!-- free chapter starts -->
-    <section id="free-chapter" class="free-chapter page">
-        <div class="container wow fadeInUp">
-            <div class="row">
-                <div class="col-md-12 main-heading">
-                    <h1 class="text-center">Get a free <span>chapter</span></h1>
-                    <h3 class="text-center">All Taskers are screened for quality and reliablity.</h3>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-nav">
-                        <ul>
-                            <li class="text-center active first-step wow fadeInLeft" data-wow-delay="0.3s">first step</li>
-                            <li class="text-center second-step wow fadeInLeft" data-wow-delay="0.6s">second step</li>
-                        </ul>
-                    </div>
-
-                    <div class="free-chapter-form">
-                        <div class="form-wrapper form-1">
-                            <form id="mailchimp-subscribe">
-                                <p class="subscription-failed"></p>
-                                <input type="text" name="name" placeholder="Your Name" class="contact-input">
-                                <input type="email" name="email" placeholder="Email Address" class="contact-input">
-                                <button class="btn btn-block custom-button">Download Now</button>
-                            </form>
-                        </div>
-
-                        <div class="form-wrapper form-2" style="display:none">
-                            <form id="mailchimp-subscribe-2">
-                                <p class="subscription-success"></p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 hidden-xs hidden-sm">
-                    <figure class="free-chapter-img img-1">
-                        <img src="images/free-chapter/chapter.png" class="img-responsive" alt='published-img'>
-                    </figure>
-                </div>
-            </div><!-- End: .row -->
-        </div><!-- End: .container-->
-    </section>
-    <!-- end of free chapter -->
 
     <!--gallery starts -->
     <section id="gallery" class="gallery page">
@@ -668,6 +482,27 @@
         </div><!-- End: .container-->
     </section>
     <!--gallery ends -->
+
+    <!-- book trailer -->
+    <section id="video" class="book-trailer page" style="background-image: url('images/trailer/video-player.jpg');">
+        <div class="container">
+            <div class="trailer-text text-center">
+                <a class="popup-vimeo wow fadeInUp" href="//vimeo.com/45830194">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                            <g>
+                                <path fill="#fff" stroke="none" stroke-width="2" stroke-miterlimit="10" d="M53.92,10.081
+                                                    c12.107,12.105,12.107,31.732,0,43.838c-12.106,12.108-31.734,12.108-43.839,0c-12.107-12.105-12.107-31.732,0-43.838
+                                                    C22.186-2.027,41.813-2.027,53.92,10.081z" />
+                                <polygon fill="#e9ba00" stroke="none" stroke-width="2" stroke-linejoin="bevel" stroke-miterlimit="10" points="21,16 52,32 21,48   " />
+
+                            </g>
+                        </svg>
+                </a>
+                <h3 class="wow fadeInUp">watch the book trailer</h3>
+            </div>
+        </div>
+    </section>
+    <!-- book trailer ends -->
 
     <!--reviews -->
     <section id="reviews" class="reviews page">
@@ -879,7 +714,7 @@
                     </div>
 
                     <div class="col-md-5 col-md-pull-7">
-                        <h2 class="text-center">Žabljak</h2>
+                        <h2 class="text-center">Durmitor</h2>
                         <div class="bonus-span text-center">
                             <span class="bonus-price">$17</span><span class="bonus-free">free</span>
                         </div>
@@ -1283,7 +1118,23 @@
                         <div class="row">
                             <div class="col-sm-5 col-lg-4 text-center">
                                 <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
+                                    <img src="images/destinations/biogradska.jpg" class="img-responsive" alt='published-img'>
+                                </div>
+                            </div>
+                            <div class="contributor-desc col-sm-7 col-lg-8 text-center">
+                                <h4>adam statham</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contributor clearfix">
+                        <div class="row">
+                            <div class="col-sm-5 col-lg-4 text-center">
+                                <div class="contributor-img">
+                                    <img src="images/destinations/durmitor.jpg" class="img-responsive" alt='published-img'>
                                 </div>
                             </div>
                             <div class="contributor-desc col-sm-7 col-lg-8 text-center">
@@ -1300,24 +1151,7 @@
                         <div class="row">
                             <div class="col-sm-5 col-lg-4 text-center">
                                 <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
-                                </div>
-                            </div>
-                            <div class="contributor-desc col-sm-7 col-lg-8 text-center">
-                                <h4>adam statham</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
-                                <span class="contributor-url"><a href="">http://mywebsitename.com</a></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="contributor clearfix">
-                        <div class="row">
-                            <div class="col-sm-5 col-lg-4 text-center">
-                                <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
+                                    <img src="images/destinations/kotor.jpg" class="img-responsive" alt='published-img'>
                                 </div>
                             </div>
                             <div class="contributor-desc col-sm-7 col-lg-8 text-center">
@@ -1334,7 +1168,7 @@
                         <div class="row">
                             <div class="col-sm-5 col-lg-4 text-center">
                                 <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
+                                    <img src="images/destinations/lovcen.jpg" class="img-responsive" alt='published-img'>
                                 </div>
                             </div>
                             <div class="contributor-desc col-sm-7 col-lg-8 text-center">
@@ -1351,7 +1185,7 @@
                         <div class="row">
                             <div class="col-sm-5 col-lg-4 text-center">
                                 <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
+                                    <img src="images/destinations/ostrog.jpg" class="img-responsive" alt='published-img'>
                                 </div>
                             </div>
                             <div class="contributor-desc col-sm-7 col-lg-8 text-center">
@@ -1368,7 +1202,39 @@
                         <div class="row">
                             <div class="col-sm-5 col-lg-4 text-center">
                                 <div class="contributor-img">
-                                    <img src="http://placehold.it/979X816" class="img-responsive" alt='published-img'>
+                                    <img src="images/destinations/perast.jpg" class="img-responsive" alt='published-img'>
+                                </div>
+                            </div>
+                            <div class="contributor-desc col-sm-7 col-lg-8 text-center">
+                                <h4>Orisum Nagasaki</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                <span class="contributor-url"><a href="">http://mywebsitename.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contributor clearfix">
+                        <div class="row">
+                            <div class="col-sm-5 col-lg-4 text-center">
+                                <div class="contributor-img">
+                                    <img src="images/destinations/porto.jpg" class="img-responsive" alt='published-img'>
+                                </div>
+                            </div>
+                            <div class="contributor-desc col-sm-7 col-lg-8 text-center">
+                                <h4>Orisum Nagasaki</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                                <span class="contributor-url"><a href="">http://mywebsitename.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contributor clearfix">
+                        <div class="row">
+                            <div class="col-sm-5 col-lg-4 text-center">
+                                <div class="contributor-img">
+                                    <img src="images/destinations/sveti.jpg" class="img-responsive" alt='published-img'>
                                 </div>
                             </div>
                             <div class="contributor-desc col-sm-7 col-lg-8 text-center">
@@ -1414,7 +1280,7 @@
             let name =  $(this).attr('name');
 
             if($(this).val() == 'other') {
-                $(this).replaceWith(`<input type="text" class="form-control" name="${name}" value="ehhed" placeholder="Enter desired location">`); // the selected options’s value
+                $(this).replaceWith(`<input type="text" class="form-control" name="${name}" value="" placeholder="Enter desired location">`); // the selected options’s value
             }
 
 
@@ -1432,7 +1298,24 @@
             })
         });
 
-        $("#taxibooked").delay(3000).fadeOut();
+        $("#taxibooked").delay(4000).fadeOut();
+
+        var $window = $(window);
+
+        if($window.width()<992){
+
+            // Remove desktop pricing
+            $("#book-trailer").css('display','none');
+
+
+            // Adds mobile pricing
+            $("#book-facts").css('display','block');
+            $("a[href='#book-trailer']").replaceWith(`<a data-scroll href="#book-facts">facts</a>`);
+
+
+        }
+
+
 
     </script>
 

@@ -4,7 +4,6 @@
 
 Project:    Interactive & Responsive Landing Page Template for Books
 Version:    1.0
-Last change:    11/29/2015 [fixed commetning]
 Author: Wahid Polin
 
 ====================================================================
@@ -43,6 +42,8 @@ Author: Wahid Polin
 =====================================================================*/
 
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -60,6 +61,7 @@ body {
 .page {
     padding: 60px 0 60px;
 }
+
 h1,
 h2,
 h3,
@@ -67,7 +69,6 @@ h4,
 h5,
 h6 {
     margin: 0;
-    color: #e6e6e6;
 }
 h1 {
     font-size: 40px;
@@ -100,6 +101,7 @@ h5 {
     letter-spacing: 2px;
     line-height: 20px;
 }
+
 ul {
     padding: 0;
     margin: 0;
@@ -109,46 +111,44 @@ li {
 }
 p {
     font-family: 'Merriweather','Serif';
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
-    color: #b3b3b3;
+    color: #777;
     margin-bottom: 20px;
 }
 .carousel-indicators li {
-    color: #a80;
+    color: #FF3B6B;
     transition: all 0.3s;
 }
 .carousel-indicators li.active {
-    color: #FFCC00;
-    background-color: #191919;
+    color: #777;
 }
 .custom-button,
 .custom-button:focus {
     position: relative;
-    background-color: #FFCC00;
-    box-shadow: 0 6px #bb9600;
-    padding: 10px;
+    background-color: #FDDC66;
     border-radius: 0 0 5px 5px;
-    color: #090909;
-    /*#95130a;*/
+    box-shadow: 0 6px #d8bb51;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #4f482d;
     letter-spacing: 2px;
     outline: none;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 18px;
     transition: .1s color;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1)
 }
 .custom-button:hover,
 .custom-button:active {
-    box-shadow: 0 4px #bb9600;
+    box-shadow: 0 4px #d8bb51;
     top: 2px;
-    color: #222;
+    color: rgba(0, 0, 0, 0.8);
     outline: none;
 }
 .custom-button:active {
     outline: none;
-    box-shadow: 0 0 #1a1a1a;
+    box-shadow: 0 0 #ab3c3c;
     top: 6px;
 }
 .custom-button:visited {
@@ -166,29 +166,29 @@ a:focus {
 /* =============== CUSTIOM CAROUSEL ANIMATION ====================*/
 
 .carousel-fade .carousel-inner .item {
-    -webkit-transition-property: opacity;
-    transition-property: opacity;
+      -webkit-transition-property: opacity;
+      transition-property: opacity;
 }
 .carousel-fade .carousel-inner .item,
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-    opacity: 0;
+  opacity: 0;
 }
 .carousel-fade .carousel-inner .active,
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
+  opacity: 1;
 }
 .carousel-fade .carousel-inner .next,
 .carousel-fade .carousel-inner .prev,
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-    left: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .carousel-fade .carousel-control {
-    z-index: 2;
+  z-index: 2;
 }
 
 /* =============== CAROUSEL ANIMATION DELAY ====================*/
@@ -198,21 +198,27 @@ a:focus {
     -moz-animation-delay: 300ms;
     animation-delay: 300ms;
 }
+
 .delay-2 {
     -webkit-animation-delay: 600ms;
     -moz-animation-delay: 600ms;
     animation-delay: 600ms;
 }
+
 .delay-3 {
     -webkit-animation-delay: 1200ms;
     -moz-animation-delay: 1200ms;
     animation-delay: 1200ms;
 }
+
 .delay-4 {
     -webkit-animation-delay: 1500ms;
     -moz-animation-delay: 1500ms;
     animation-delay: 1500ms;
 }
+
+
+
 
 /*===================================================================
 //===================================================================
@@ -221,6 +227,7 @@ a:focus {
 
 //=====================================================================
 //=====================================================================*/
+
 
 #loader-wrapper {
     position: fixed;
@@ -249,6 +256,9 @@ a:focus {
     /* is width and height divided by two */
 }
 
+
+
+
 /*===================================================================
 //===================================================================
 
@@ -262,8 +272,8 @@ a:focus {
     margin-bottom: 0;
 }
 .navbar-default {
-    background-color: #111;
-    border-color: #191919;
+    background-color: #3C3C3C;
+    border-color: #3C3C3C;
     box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.4);
 }
 .navbar-header {
@@ -282,7 +292,7 @@ a:focus {
     margin: 20px auto;
 }
 .navbar-default .navbar-nav>li>a {
-    color: #a2a2a2;
+    color: #cacaca;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -294,18 +304,19 @@ a:focus {
     outline: none;
 }
 .navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    color: #FFCC00;
+    color: #FF3B6B;
     outline: none;
-    font-weight: 700;
 }
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
-    background-color: #111;
+    background-color: #3C3C3C;
 }
+
+
+
 
 /*===================================================================
 //===================================================================
@@ -315,11 +326,7 @@ a:focus {
 //=====================================================================
 //=====================================================================*/
 
-.hero {
-    background: #282537;
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
-    color: #f3f3f3;
-}
+
 .hero.page {
     padding: 130px 0 90px;
 }
@@ -417,36 +424,31 @@ html.no-preserve3d #items > div {
     position: relative;
     width: 140px;
     font-size: 12px;
-    font-weight: 400;
     letter-spacing: 2px;
     text-transform: uppercase;
     padding: 3px;
-    color: #cca300;
-    border: none;
-    outline: none;
-    font-weight: 400;
     background-color: transparent;
-    border-radius: 0 0 4px 4px;
-    border: 1px solid #333;
+    border: 1px solid rgba(87, 87, 87, 0.4);
+    outline: none;
 }
 .book-buttons button:hover {
-    color: #cca300;
+    color: #000;
     top: 1px;
-    box-shadow: 0 3px #1a1a1a;
-    top: 2px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
 .book-buttons button:hover span {
-    color: #cca300;
+    color: #000;
 }
 .book-buttons button a,
 .book-buttons button a:hover,
 .book-buttons button a:active {
-    color: #7f7f7f;
+    color: #F7003C;
     text-decoration: none;
     outline: none;
 }
 .book-button span {
-    color: #c3c3c3;
+    color: #F7003C;
 }
 ul#inline-popups {
     display: inline-block;
@@ -455,25 +457,23 @@ ul#inline-popups {
     position: relative;
     display: inline-block;
     width: 140px;
-    border: none;
+    border: 1px solid rgba(87, 87, 87, 0.4);
     padding: 3px 8px;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: transparent;
-    color: #cca300;
-    border: 1px solid #333;
     border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px rgba(0, 0, 0, 0.1);
 }
 #inline-popups li:hover {
     top: 1px;
-    color: #cca300;
+    color: #000;
 }
 #inline-popups li:hover a {
-    color: #cca300;
+    color: #000;
 }
 #inline-popups li a {
-    color: #a2a2a2;
+    color: #F7003C;
     width: 100%;
     height: 100%;
 }
@@ -489,6 +489,15 @@ ul#inline-popups {
 }
 .listen {
     margin-left: 5px;
+}
+div.listen-content{
+    display: inline-block;
+    font-family: 'Merriweather','Serif';
+}
+.listen-content.span{
+    font-style: italic;
+    font-size: 10px;
+    color: #FF3B6B;
 }
 
 /*================== BOOK ANIMATION CLASSES ==========================*/
@@ -535,13 +544,14 @@ ul#inline-popups {
 
 .white-popup {
     position: relative;
-    background: #333;
+    background: #ececec;
     width: auto;
     width: 100%;
     height: 90vh;
     margin: 0 auto;
     border-radius: 5px;
     padding: 60px 10px 10px;
+    border: 5px solid rgba(255, 255, 255, .4);
 }
 .white-popup .popup-header {
     position: absolute;
@@ -553,7 +563,7 @@ ul#inline-popups {
     padding: 40px 10px 0;
 }
 .white-popup .popup-header span {
-    color: #aaa;
+    color: #888;
     font-weight: 400;
 }
 .white-popup span.popup-title {
@@ -568,7 +578,7 @@ ul#inline-popups {
 }
 .white-popup button.mfp-close,
 button.mfp-arrow {
-    background: #FFCC00;
+    background: rgb(188, 188, 188);
 }
 .white-popup .mfp-close {
     width: 20px;
@@ -579,6 +589,7 @@ button.mfp-arrow {
     font-size: 20px;
     border-radius: 5px;
 }
+
 .look-inside-page{
 	box-shadow: 0 0 8px rgba(0,0,0,0.2);
 }
@@ -625,7 +636,6 @@ button.mfp-arrow {
 .mfp-move-from-top.mfp-removing.mfp-bg {
     opacity: 0;
 }
-
 /*====== ./END MOVE FROM TOP EFFECT ======*/
 
 .popover {
@@ -635,31 +645,26 @@ button.mfp-arrow {
     padding: 0 21px;
 }
 .hero h3 {
-    margin-bottom: 10px;
-    color: #e6e6e6;
+    margin-bottom: 10px
 }
 .hero h1 {
-    color: #e6e6e6;
+    color: #2a2a2a;
     text-transform: uppercase;
     margin-bottom: 10px;
 }
 .hero h5 {
     margin-bottom: 30px;
-    color: #e6e6e6;
 }
 .hero blockquote {
     padding-top: 0;
-    font-size: 16px;
+    font-size: 15px;
     border-left: none;
     padding-left: 30px;
     line-height: 30px;
     margin-bottom: 30px;
     position: relative;
     max-width: 100%;
-    color: #a2a2a2;
-    font-size: 14px;
-    font-family: 'Merriweather';
-    font-weight: 300;
+    color: #666;
 }
 .hero blockquote:before {
     content: '\201C';
@@ -671,19 +676,18 @@ button.mfp-arrow {
     top: 5px;
 }
 .hero cite {
-    font-style: italic;
     font-weight: 300;
-    color: #777;
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     font-size: 12px;
+    font-style: normal;
     display: block;
     padding: 0.3125rem;
     margin-top: 30px;
 }
-.hero-cite-name {
-    margin-right: 10px;
-    text-transform: uppercase;
-}
+
+
+
 
 /*===================================================================
 //===================================================================
@@ -693,12 +697,12 @@ button.mfp-arrow {
 //=====================================================================
 /=====================================================================*/
 
+
 .as-seen-on {
-    background-color: #111;
-    border-top: 2px solid #000;
+    background-color: #eee;
+    border-top: 2px solid #e6e6e6;
 }
 .as-seen-on h3 {
-    color: #a2a2a2;
     margin-bottom: 20px;
 }
 .as-seen-img {
@@ -709,6 +713,9 @@ button.mfp-arrow {
     margin: 0 auto;
 }
 
+
+
+
 /*===================================================================
 //===================================================================
 
@@ -717,28 +724,15 @@ button.mfp-arrow {
 //=====================================================================
 //=====================================================================*/
 
+
 .book-trailer {
     position: relative;
-    background-image: url('http://placehold.it/2089X1393');
+    background-color: #fff;
+    background-image: url('../images/pricing.jpg');
     background-position: center center;
     background-size: cover;
     height: 350px;
     color: #fff;
-}
-.trailer-text {
-    position: relative;
-    z-index: 3;
-}
-.book-trailer .container:after {
-    content: "";
-    display: block;
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5) 0%, #191919 100%);
 }
 .book-trailer svg {
     margin-bottom: 20px;
@@ -751,7 +745,7 @@ button.mfp-arrow {
     fill-opacity: 0.2;
 }
 .book-trailer svg:hover polygon {
-    fill: #FFCC00;
+
     stroke: none;
 }
 .book-trailer svg:hover path {
@@ -759,9 +753,27 @@ button.mfp-arrow {
     fill: #fff;
     fill-opacity: 1;
 }
-.trailer-text {
+.trailer-text{
     margin-top: 60px;
+    position: relative;
+    z-index: 3;
 }
+
+/*Ja makao da bi tu stavili destinations price picture*/
+
+/*.book-trailer .container:after{*/
+    /*content:"";*/
+    /*display:block;*/
+    /*position: absolute;*/
+    /*z-index: 0;*/
+    /*top:0;*/
+    /*bottom:0;*/
+    /*left:0;*/
+    /*right: 0;*/
+    /*background: linear-gradient(45deg, rgba(0,0,0,0.5) 0%, #191919 100%);*/
+/*}*/
+
+
 .book-trailer h1 {
     display: inline-block;
     font-size: 24px;
@@ -782,6 +794,8 @@ button.mfp-arrow {
     color: rgba(255, 0, 62, 0.5);
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -790,8 +804,9 @@ button.mfp-arrow {
 //=====================================================================
 //=====================================================================*/
 
+
 .what-you-learn {
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
+    background-color: #eee;
 }
 #what-you-learn-carousel .carousel-indicators {
     position: static;
@@ -803,15 +818,14 @@ button.mfp-arrow {
     padding-left: 0;
     list-style: none;
     text-align: left;
-    color: #d51b0e;
 }
 #what-you-learn-carousel .carousel-indicators li {
     text-indent: 0;
-    border: 1px solid #191919;
+    border: 1px solid #ccc;
     border-radius: 0;
     cursor: pointer;
     background-color: transparent;
-    color: #a80;
+    color: #FF3B6B;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -823,25 +837,24 @@ button.mfp-arrow {
     width: 100%;
     margin-bottom: 10px;
 }
-#what-you-learn-carousel .carousel-indicators li.active {
-    background-color: #222;
-    color: #FFCC00;
-}
 #what-you-learn-carousel .carousel-indicators .active {
     background-color: transparent;
     height: auto;
 }
+#what-you-learn-carousel .carousel-indicators li.active {
+    background-color: #ddd;
+    
+}
+.book-page-2{
+    margin-top: 30px;
+}
 .what-you-learn p {
-    font-family: 'Merriweather', 'serif';
-    font-size: 14px;
     max-width: 378px;
     margin-left: auto;
     margin-right: auto;
 }
-.book-page-2 {
-    margin-top: 30px;
-}
-.book-page-2 p {}
+
+
 
 /*===================================================================
 //===================================================================
@@ -851,10 +864,7 @@ button.mfp-arrow {
 //=====================================================================
 //=====================================================================*/
 
-.book-facts {
-    background-color: #111;
-    color: #9a9a9a;
-}
+
 .book-facts h3 {
     width: 90%;
     margin: 0 auto;
@@ -865,13 +875,13 @@ button.mfp-arrow {
     padding: 85px 0 40px;
     margin: 0 auto 30px;
     height: 266px;
-    background-color: #191919;
+    background-color: #eee;
 }
 .fact span.fact-number {
     margin-bottom: 5px;
     font-size: 33px;
     font-weight: 700;
-    color: #777;
+    color: #333;
 }
 .fact span {
     font-size: 14px;
@@ -881,8 +891,10 @@ button.mfp-arrow {
     display: block;
     text-align: center;
     padding-bottom: 3px;
-    color: #FFCC00;
+    color: #777;
 }
+
+
 
 /*===================================================================
 //===================================================================
@@ -892,9 +904,9 @@ button.mfp-arrow {
 //=====================================================================
 //=====================================================================*/
 
+
 .chapters {
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
-    color: #a2a2a2;
+    background-color: #eee;
 }
 .chapter {
     position: relative;
@@ -938,6 +950,9 @@ html.no-preserve3d .chapter .front {
 
 /*============ ./END FOR BROWSERS THAT DON'T SUPPORT ANIMMATION ============*/
 
+.chapters {
+    background-color: #ececec;
+}
 .chapter {
     position: relative;
     height: 266px;
@@ -948,7 +963,6 @@ html.no-preserve3d .chapter .front {
     cursor: pointer;
     max-width: 374px;
     margin: 0 auto 30px;
-    color: #9a9a9a;
 }
 .chapter .front,
 .chapter .back {
@@ -974,9 +988,10 @@ html.no-preserve3d .chapter .front {
     position: absolute;
     top: 0;
     left: 0;
+    border: 1px solid #ccc;
 }
 .chapter .front {
-    background: #111;
+    background: #fff;
     -webkit-transform: rotateY(0deg);
     -moz-transform: rotateY(0deg);
     -o-transform: rotateY(0deg);
@@ -987,8 +1002,10 @@ html.no-preserve3d .chapter .front {
     border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .chapter .back {
-    background-color: #111;
+    background-color: #fff;
     font-size: 24px;
+    color: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
     padding: 0;
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);
@@ -999,9 +1016,6 @@ html.no-preserve3d .chapter .front {
 }
 .chapter .back .chapter-back-top {
     padding: 20px 0 20px 20px;
-}
-.chapter h4 {
-    color: #FFCC00;
 }
 .chapter .back img,
 .chapter .back h3,
@@ -1018,18 +1032,22 @@ html.no-preserve3d .chapter .front {
     padding: 0 0 0 20px;
 }
 .chapter .back h3 {
+    color: #666;
     margin-top: 5px;
 }
-.chapter .back h4 {}
+.chapter .back h4 {
+    color: #777;
+}
 .chapter .back p {
-    font-family: 'Merriweather';
-    font-size: 14px;
     padding: 0 20px 20px;
-    ;
+    font-size: 14px;
     text-align: left;
 }
 .chapter:hover {
     z-index: 10;
+}
+.chapter:hover .back {
+    background-color: #fff;
 }
 .chapter:hover .front {
     -webkit-transform: rotateY(-15deg);
@@ -1037,7 +1055,8 @@ html.no-preserve3d .chapter .front {
     -o-transform: rotateY(-15deg);
     -ms-transform: rotateY(-15deg);
     transform: rotateY(-15deg);
-    background: #191919;
+    background: #f7f7f7;
+    border: 1px solid #f7f7f7;
     -moz-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
@@ -1050,7 +1069,7 @@ html.no-preserve3d .chapter .front {
     transform: rotateY(165deg);
 }
 .chapter .front img {
-    max-height: 82px;
+    width: 100px;
     margin: 30px 0 20px;
 }
 .chapter h3 {
@@ -1058,12 +1077,13 @@ html.no-preserve3d .chapter .front {
     font-weight: 800;
     padding: 7px 25px;
     margin-bottom: 5px;
-    color: #4c4c4c;
+    color: #333;
     text-transform: none;
     letter-spacing: 0;
 }
 .chapter h4 {
     padding: 5px;
+    color: #000;
 }
 .chapter.flip-to-back .front {
     -webkit-transform: rotateY(-180deg);
@@ -1086,6 +1106,8 @@ html.no-preserve3d .chapter .front {
     transform-origin: 50% 50%;
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1094,9 +1116,9 @@ html.no-preserve3d .chapter .front {
 //=====================================================================
 //=====================================================================*/
 
+
 .free-chapter {
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
-    color: #9a9a9a;
+    background-color: #f7f7f7;
 }
 .free-chapter h1 span {
     font-weight: 300;
@@ -1115,7 +1137,7 @@ html.no-preserve3d .chapter .front {
     display: block;
     width: 100%;
     border: 0;
-    border: 1px solid #222;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 20px;
     background: none;
@@ -1138,7 +1160,7 @@ html.no-preserve3d .chapter .front {
 }
 .form-wrapper {
     position: absolute;
-    background-color: #191919;
+    background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.2);
     min-height: 255px;
     width: 100%;
@@ -1157,7 +1179,6 @@ p.subscription-failed {
     padding: 3px 20px;
     font-size: 15px;
     font-style: italic;
-    color: black;
 }
 p.subscription-failed i.fa {
     color: #ab3c3c;
@@ -1175,26 +1196,23 @@ p.subscription-success i.fa {
 .form-nav {
     text-align: center;
 }
+.form-nav ul li.active {
+    background-color: #fff;
+}
 .free-chapter ul {
     display: inline-block;
     margin-bottom: 40px;
 }
 .free-chapter ul li {
     border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 5px 10px;
+    padding: 5px 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 14px;
-    color: #666;
+    color: #FF3B6B;
     display: inline-block;
     width: auto;
     margin: 0 auto;
-}
-.form-nav ul li.active {
-    background-color: #191919;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 1px #540;
-    color: #FFCC00;
 }
 .free-chapter ul li:first-child {
     margin-right: 10px;
@@ -1259,6 +1277,8 @@ p.subscription-success i.fa {
     }
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1267,10 +1287,7 @@ p.subscription-success i.fa {
 //=====================================================================
 //=====================================================================*/
 
-.gallery {
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
-    color: #a2a2a2;
-}
+
 .gallery .no-gutter > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
@@ -1294,16 +1311,16 @@ span.img-caption {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color: #212121;
+    background-color: #FDDC66;
     padding: 5px 0;
     width: 100%;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 13px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 a span.img-caption {
-    color: #FFCC00;
+    color: #000;
 }
 .img-hover {
     background: url('../images/gallery/gallery-hover.svg') center center no-repeat rgba(0, 0, 0, 0.6);
@@ -1351,6 +1368,8 @@ a span.img-caption {
     opacity: 0;
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1359,8 +1378,9 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .reviews {
-    background: linear-gradient(#191919 0%, #000 80%);
+    background-color: #f7f7f7;
 }
 .reviews .carousel-indicators {
     position: static;
@@ -1375,15 +1395,12 @@ a span.img-caption {
     height: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 14px;
+    font-size: 12px;
     border: none;
     border-radius: 0;
     margin: 0 10px 10px 0;
-}
-.reviews .carousel-indicators li.active {
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 1px #540;
-    padding: 5px 15px;
+    border: 1px solid #d5d5d5;
+    padding: 5px 10px;
 }
 .reviews blockquote {
     font-family: 'Cardo', serif;
@@ -1393,7 +1410,7 @@ a span.img-caption {
     border-left: none;
     width: 100%;
     margin: 40px auto 0;
-    color: #a2a2a2;
+    color: #777;
     padding: 0;
 }
 .reviews blockquote:before {
@@ -1401,18 +1418,18 @@ a span.img-caption {
     font-family: 'Arial Black';
     font-style: normal;
     font-size: 70px;
-    color: rgba(87, 87, 87, 0.3);
+    color: rgba(87, 87, 87, 0.1);
     position: absolute;
     top: 0;
 }
 .reviews .blockquote-cite {
     font-family: 'Merriweather', serif;
     font-size: 14px;
-    letter-spacing: 2px;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
     margin-top: 30px;
-    color: #666;
+    color: #777;
+    letter-spacing: 1px;
 }
 .reviews .no-gutter > [class*='col-'] {
     padding-right: 0;
@@ -1432,21 +1449,25 @@ a span.img-caption {
 .reviews .blockquote-cite span {
     display: block;
 }
+
+
 .cite-name {
     font-weight: 400;
     text-transform: uppercase;
     margin-top: 10px;
     letter-spacing: 1px;
 }
-.reviews .blockquote-cite span.cite-url a {
-    color: #555;
+.reviews .blockquote-cite span.cite-url a{
+    color: #a2a2a2;
     font-size: 12px;
     transition: all 0.3s;
 }
-.reviews .blockquote-cite span.cite-url a:hover {
-    text-decoration: none;
-    color: #ddb100;
+.reviews .blockquote-cite span.cite-url a:hover{
+    text-decoration:none;
+    color: #FF3B6B;
 }
+
+
 
 /*===================================================================
 //===================================================================
@@ -1456,10 +1477,7 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
-.read-anywhere {
-    background-color: #111;
-    color: #a2a2a2;
-}
+
 .read-anywhere .carousel-indicators {
     position: static;
     margin: 0 auto 40px;
@@ -1472,21 +1490,21 @@ a span.img-caption {
     width: auto;
     height: auto;
     padding: 5px 3px;
+    border: 1px solid #d5d5d5;
     border-radius: 0;
     text-align: center;
     margin: 0;
     margin-right: 1px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    border: none;
+    color: #FF3B6B;
 }
 .read-anywhere .carousel-indicators li:first-child {
     margin-left: 0;
 }
 .read-anywhere .carousel-indicators .active {
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 1px #540;
-    color: #FFCC00;
+    background-color: transparent;
+    color: #777
 }
 .read-anywhere .carousel-indicators li img {
     display: none;
@@ -1499,6 +1517,8 @@ a span.img-caption {
     width: 100%;
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1507,16 +1527,15 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .bonuses {
-    background-color: #090909;
-    color: #a2a2a2;
+    background-color: #f7f7f7
 }
 .bonus {
     max-width: 500px;
     margin: 0 auto 40px;
 }
 .bonuses h4 {
-    color: #FFCC00;
     margin-bottom: 5px;
 }
 .bonuses h2 {
@@ -1553,6 +1572,8 @@ a span.img-caption {
     margin: 0 auto 30px;
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1561,10 +1582,7 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
-.pricing {
-    background-color: #111;
-    color: #a2a2a2;
-}
+
 .pricing h1 span {
     font-weight: 300;
 }
@@ -1589,14 +1607,13 @@ a span.img-caption {
     background-color: transparent;
     margin-bottom: 15px;
     background-image: none;
+    color: #FF3B6B;
     border: 1px solid rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 .pricing .carousel-indicators li.active {
-    background-color: #191919;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 1px #540;
+    color: #999;
 }
 .pricing .carousel-inner {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -1604,7 +1621,6 @@ a span.img-caption {
     overflow: visible;
     max-width: 500px;
     margin: 0 auto;
-    background-color: #191919;
 }
 .pricing .carousel-inner .item {
     margin: 30px 15px 50px;
@@ -1612,7 +1628,6 @@ a span.img-caption {
 .pricing-dollar {
     font-size: 30px;
     font-weight: 100;
-    color: #e6e6e6;
 }
 .pricing-number {
     display: inline-block;
@@ -1620,20 +1635,20 @@ a span.img-caption {
     font-weight: 900;
     margin-bottom: 30px;
     line-height: 1em;
-    color: #e6e6e6;
 }
 .pricing .item li {
-    font-family: 'Merriweather';
     background-image: url(../images/check.png);
     background-repeat: no-repeat;
     background-size: 23px 23px;
     padding: 0 0 15px 40px;
     font-size: 15px;
-    color: #a2a2a2;
+    color: #777;
 }
 .pricing .custom-button {
     margin-top: 30px;
 }
+
+
 
 /*===================================================================
 //===================================================================
@@ -1643,9 +1658,9 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .faqs {
-    background: linear-gradient(#191919 0%, #000 80%);
-    color: #a2a2a2;
+    background-color: #f7f7f7;
 }
 .faq {
     max-width: 500px;
@@ -1656,15 +1671,15 @@ a span.img-caption {
     margin-bottom: 60px;
 }
 .faqs h4 {
-    letter-spacing: 2px;
     margin-bottom: 10px;
 }
 .faqs p {
     font-size: 14px;
     line-height: 23px;
     margin-bottom: 30px;
-    color: #a2a2a2;
 }
+
+
 
 /*===================================================================
 //===================================================================
@@ -1674,10 +1689,7 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
-.author {
-    background-color: #111;
-    color: #a2a2a2;
-}
+
 .author h1 {
     margin-bottom: 40px;
 }
@@ -1691,6 +1703,7 @@ a span.img-caption {
     font-size: 14px;
     max-width: 500px;
     margin: 0 auto 20px;
+    color: #666;
 }
 .author ul.author-social {
     max-width: 500px;
@@ -1701,18 +1714,21 @@ a span.img-caption {
     margin-right: 3px;
 }
 .author ul.author-social li .fa {
-    color: #FFCC00;
-    font-size: 14px;
+    color: #777;
+    font-size: 16px;
     padding: 8px 10px;
-    background-color: #191919;
+    background-color: #e4e4e4;
     border-radius: 4px;
-    box-shadow: 0 1px #333;
+    box-shadow: 0 1px #c2c2c2;
     transition: all 0.3s;
 }
 .author ul.author-social li .fa:hover {
     color: #000;
     background-color: #d3d3d3;
 }
+
+
+
 
 /*===================================================================
 //===================================================================
@@ -1722,32 +1738,29 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .contributors {
-    background: linear-gradient(45deg, #191919 0%, #000 100%);
-    color: #a2a2a2;
+    background-color: #f7f7f7;
 }
 .contributors h4 {
     margin-bottom: 10px;
     font-weight: 600;
     letter-spacing: 1px;
-    color: #FFCC00;
 }
 .contributors h3 {
     font-weight: 400;
     margin-bottom: 60px;
 }
 .contributor {
-    background-color: #191919;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     max-width: 384px;
     margin: 0 auto 30px;
     padding: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .contributor-img {
     margin-bottom: 30px;
     height: auto;
 }
-.contributor-img img {}
 .contributor h3 {
     text-transform: uppercase;
     font-size: 14px;
@@ -1757,6 +1770,7 @@ a span.img-caption {
 }
 .contributor p {
     font-size: 14px;
+    color: #777;
     line-height: 23px;
     margin-bottom: 10px;
 }
@@ -1769,10 +1783,13 @@ a span.img-caption {
     font-size: 12px;
     transition: all 0.3s;
 }
+
 .contributor-url a:hover {
-    text-decoration: none;
-    color: #ddb100;
+    text-decoration:none;
+    color: #FF3B6B;
 }
+
+
 
 /*===================================================================
 //===================================================================
@@ -1782,10 +1799,10 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .cta {
-    background-color: #111;
-    color: #a2a2a2;
-    border-top: 2px solid #000;
+    background-color: #ececec;
+    border-top: 2px solid #e6e6e6;
 }
 .cta h1 {
     font-size: 30px;
@@ -1803,6 +1820,8 @@ a span.img-caption {
     margin: 0 auto;
 }
 
+
+
 /*===================================================================
 //===================================================================
 
@@ -1811,9 +1830,10 @@ a span.img-caption {
 //=====================================================================
 //=====================================================================*/
 
+
 .footer {
-    background: linear-gradient(#000 50%, #292929 100%);
-    color: #a2a2a2;
+    background-color: #2b2b2b;
+    color: #ccc;
 }
 .footer p {
     font-size: 14px;
@@ -1827,21 +1847,19 @@ a span.img-caption {
     margin-bottom: 30px;
 }
 .footer h4 {
-    color: #FFCC00;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0;
     text-transform: none;
     margin-bottom: 12px;
 }
-.footer li {
+.footer li a{
+    display: block;
     margin-bottom: 5px;
-}
-.footer li a {
     color: #aaa;
-    transition: all 0.3s;
+    transition:all 0.3s;
 }
-.footer li a:hover {
-    text-decoration: none;
-    color: #ddb100;
+.footer li a:hover{
+    text-decoration:none;
+    color: #FF3B6B;
 }

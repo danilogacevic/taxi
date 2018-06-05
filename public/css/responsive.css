@@ -11,8 +11,9 @@
 ==================================*/
 
 
-/*======== SCREEN RESOLUTION 400+ =============*/
 
+
+/*======== SCREEN RESOLUTION 400+ =============*/
 @media (min-width: 400px) {
     /*======= hero =======*/
     .package {
@@ -55,13 +56,9 @@
     .side {
         height: 467px;
     }
-    /*======= chapters =======*/
+    /*======= chapter =======*/
     .chapter-back {
         padding: 40px;
-    }
-    /*======= reviews =======*/
-    .cite-name {
-        margin-top: 30px;
     }
     /*======= read anywhere =======*/
     .read-anywhere .carousel-indicators li {
@@ -82,13 +79,10 @@
 }
 
 /*======== SCREEN RESOLUTION 500+ =============*/
-
 @media (min-width: 500px) {
-    /*======= top navbar =======*/
     .navbar-collapse ul {
         width: 40%;
     }
-    /*======= hero =======*/
     .hero blockquote {
         max-width: 492px;
         margin: 0 auto 30px;
@@ -97,7 +91,10 @@
         max-width: 492px;
         margin: 0 auto;
     }
-    /*======= reviews =======*/
+    /*======= free chapter =======*/
+    .free-chapter ul li {
+        width: 200px;
+    }
     .reviews .carousel-indicators {
         max-width: 80%;
     }
@@ -105,21 +102,11 @@
         max-width: 80%;
         padding: 0;
     }
-    /*======= free chapter =======*/
-    .free-chapter ul li {
-        width: 200px;
-    }
-    /*======= reviews =======*/
-    .cite-name {
-        margin-top: 45px;
-    }
-    /*======= read anywhere =======*/
     .read-anywhere .carousel-indicators li {
         font-size: 14px;
         padding: 5px 15px;
         margin-right: 8px;
     }
-    /*======= pricing =======*/
     .pricing .carousel-indicators li {
         padding: 5px 15px;
         margin-right: 5px;
@@ -131,7 +118,6 @@
 }
 
 /*======== SCREEN RESOLUTION 768+ =============*/
-
 @media(min-width: 768px) {
     /*======= general =======*/
     .page {
@@ -151,26 +137,20 @@
     /*======= what you learn =======*/
     .papers-1 {
         margin-left: 30px;
-        border: #222 solid 1px;
-        background-color: #111;
-        box-shadow: -4px 4px 0 #111, -5px 5px 0 #333, -9px 9px 0 #111, -10px 10px 0 #333;
-    }
-    .book-page-2 {
-        margin-top: 0;
-    }
-    .what-you-learn p {
-        margin-left: 0;
-        margin-right: 0;
+        border: #ccc solid 1px;
+        background-color: #fff;
+        box-shadow: -4px 4px 0 #fff, -5px 5px 0 #ccc, -9px 9px 0 #fff, -10px 10px 0 #ccc
     }
     .book-page-1-inner,
     .book-page-2-inner {
-        background-color: #111;
+        background-color: #f7f7f7;
         padding: 60px 40px;
         height: 450px;
     }
     .book-page-2-inner {
         padding: 30px 40px;
     }
+    #what-you-learn-carousel .carousel-indicators {}
     #what-you-learn-carousel .carousel-indicators li {
         background-image: url(../images/check.png);
         background-repeat: no-repeat;
@@ -184,10 +164,13 @@
     #what-you-learn-carousel .carousel-indicators li.active {
         background-color: transparent;
     }
+    .book-page-2 {
+        margin-top: 0;
+    }
     .papers-2 {
         margin-right: 30px;
-        border: #222 solid 1px;
-        box-shadow: 4px 4px 0 #111, 5px 5px 0 #333, 9px 9px 0 #111, 10px 10px 0 #333;
+        border: #ccc solid 1px;
+        box-shadow: 4px 4px 0 #fff, 5px 5px 0 #ccc, 9px 9px 0 #fff, 10px 10px 0 #ccc;
         border-left: none;
     }
     /*======= chapters ==========*/
@@ -206,6 +189,9 @@
         max-width: 533px;
         margin: 0 auto;
     }
+    .reviews .carousel-indicators li{
+        font-size:14px;
+    }
     .reviews blockquote {
         font-family: 'Cardo', serif;
         font-size: 24px;
@@ -214,13 +200,14 @@
         border-left: none;
         max-width: 533px;
         margin: 40px auto 0;
+        color: #777;
     }
     .reviews blockquote:before {
         content: '\201C';
         font-family: 'Arial Black';
         font-style: normal;
         font-size: 100px;
-        color: #3c3c3c;
+        color: rgba(87, 87, 87, 0.2);
         position: absolute;
         left: 30px;
         top: 8px;
@@ -229,26 +216,23 @@
         margin-left: 30px;
     }
     .cite-name {
-        margin-top: 45px;
+        margin-top: 25px;
     }
     /*======== author ======*/
     .author h1 {
         margin-bottom: 60px;
     }
     /*======== contributors =========*/
-    .contributors .contributor h4 {
-        margin-bottom: 0;
-        margin-top: 5px;
-    }
     .contributor {
         max-width: 500px;
-    }
-    .contributor p {
-        margin-bottom: 5px;
     }
     .contributor-inner {
         border: 4px solid white;
         padding: 20px;
+    }
+    .contributors .contributor h4 {
+        margin-bottom: 0;
+        margin-top: 5px;
     }
     .contributor-img {
         margin-bottom: 0;
@@ -257,16 +241,19 @@
     .contributor-desc {
         text-align: left;
     }
+    .contributor p {
+        margin-bottom: 5px;
+    }
     /*============== cta ==============*/
     .cta h1 {
         font-size: 36px;
         margin-bottom: 30px;
         line-height: 50px;
     }
+    /*================= footer ==============*/
 }
 
 /*======== SCREEN RESOLUTION 992+ =============*/
-
 @media(min-width: 992px) {
     /*======= general =======*/
     h1 {
@@ -288,14 +275,14 @@
         width: auto;
         margin: 0;
     }
-    .navbar-default .navbar-nav>li>a {
-        letter-spacing: 1px;
-    }
-    /*======= hero =======*/
     .details .container-custom {
         padding: 0 2rem 0 459px;
         max-width: 975px;
     }
+    .navbar-default .navbar-nav>li>a {
+        letter-spacing: 1px;
+    }
+    /*======= hero =======*/
     .package {
         margin-left: -420px;
         float: left;
@@ -350,7 +337,7 @@
         text-align: left;
     }
     .hero blockquote {
-        border-left: 4px solid #191919;
+        border-left: 4px solid rgba(0, 0, 0, 0.1);
         margin-left: 4px;
         padding-left: 20px;
         margin: 0 0 50px;
@@ -383,8 +370,9 @@
         background-color: transparent;
     }
     .book-facts {
-        border-top: 2px solid #000;
-        border-bottom: 2px solid #000;
+        background-color: #f7f7f7;
+        border-top: 2px solid #e6e6e6;
+        border-bottom: 2px solid #e6e6e6;
     }
     /*======= book trailer =======*/
     .book-trailer {
@@ -401,10 +389,7 @@
     .book-trailer svg path {
         stroke-width: 1px;
     }
-    /*======= what you learn =======*/
-    .book-page-2-inner {
-        padding: 40px;
-    }
+    /*======= chapter =======*/
     .chapter h3 {
         margin-bottom: 0;
     }
@@ -412,6 +397,10 @@
         padding: 30px;
     }
     /*======= reviews =======*/
+    .reviews {
+        border-bottom: 2px solid #e6e6e6;
+        border-top: 2px solid #e6e6e6;
+    }
     .reviews blockquote:before {
         left: 120px;
     }
@@ -422,6 +411,7 @@
         max-width: 700px;
     }
     .reviews .carousel-indicators li {
+        border: 1px solid rgba(0, 0, 0, 0.2);
         padding: 5px 15px;
     }
     /*======= read anywhere =======*/
@@ -439,15 +429,8 @@
         margin-top: 28px;
         margin-bottom: 20px;
         margin-left: 20px;
-        color: #ddb100;
-        background-color: #191919;
     }
-    #read-anywhere-slider .carousel-indicators li.active {
-        border-radius: 0 0 5px 5px;
-        box-shadow: 0 3px #cca300;
-        background-color: #222;
-        color: #FFCC00;
-    }
+    #read-anywhere-slider .carousel-indicators li.active {}
     .read-anywhere .carousel-indicators li.mobile {
         margin-left: 0;
     }
@@ -522,8 +505,8 @@
         padding-bottom: 40px;
     }
     .faqs {
-        /*border-top: 2px solid #000;
-        border-bottom: 2px solid #000;*/
+        border-top: 2px solid #e6e6e6;
+        border-bottom: 2px solid #e6e6e6;
     }
     .faq {
         max-width: 100%;
@@ -543,7 +526,7 @@
     }
     /*======= author =======*/
     .author {
-        border-bottom: 2px solid #000;
+        border-bottom: 2px solid #e6e6e6;
     }
     .author h1 {
         text-align: left;
@@ -563,6 +546,9 @@
     .contributors h3 {
         font-size: 20px;
     }
+    .contributors h4 {
+        margin: 7px 0 4px;
+    }
     .contributors p {
         margin-bottom: 6px;
     }
@@ -573,19 +559,14 @@
         max-width: 100%;
         margin: 0 0 30px;
     }
-    .contributors .contributor h4 {
-        margin-bottom: 0;
-        margin-top: 0;
-    }
     /*======= footer =======*/
     .footer-left {
-        border-right: 1px solid rgba(0, 0, 0, 0.7);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
         margin-bottom: 0;
     }
 }
 
 /*======== SCREEN RESOLUTION 1200+ =============*/
-
 @media(min-width: 1200px) {
     /*======= top navbar =======*/
     .navbar-default .navbar-nav>li>a {
@@ -645,17 +626,17 @@
     .trailer-text {
         margin-top: 70px;
     }
-    /*======= what you learn =======*/
+    /*======= read anywhere =======*/
     .book-page-2-inner {
         padding: 60px 40px;
     }
-    /*======= read anywhere =======*/
     #read-anywhere-slider .carousel-indicators {
         margin-top: 30px;
     }
     .read-anywhere .carousel-indicators li {
         width: 250px;
         height: 160px;
+        border: 1px solid #d5d5d5;
         margin: 0;
         margin-bottom: 40px;
         margin-left: 40px;
@@ -676,7 +657,7 @@
         margin: 0 auto;
         width: 300px;
     }
-    /*======= chapters =======*/
+    /*======= chapter =======*/
     .chapter .back p {
         padding: 0 35px 20px 40px;
     }
@@ -685,7 +666,7 @@
     }
     /*======= reviews =======*/
     .cite-name {
-        margin-top: 55px;
+    margin-top: 55px;
     }
     /*======= bonuses =======*/
     .bonus h3 {
@@ -700,17 +681,16 @@
         max-height: 288px;
         margin: 0;
     }
-    /*======= contributors =======*/
-    .contributors .contributor h4 {
-        margin-top: 10px;
-    }
     /*======== free chapter ==========*/
     .free-chapter {
-        border-top: 2px solid #000;
+        border-top: 2px solid #e6e6e6;
     }
-    /*======== footer ==========*/
+    .form-wrapper {
+        padding: 60px 30px;
+    }
+    /*======= footer =======*/
     .footer p {
-        margin-top: 5px;
-        margin-bottom: 35px;
+    margin-top: 5px;
+    margin-bottom: 35px;
     }
 }
