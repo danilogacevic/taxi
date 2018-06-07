@@ -84,57 +84,7 @@
                     </div>
                 </div>
                 <div class="book-buttons">
-                    {{--<button class="flip-book book-button wow fadeInLeft" data-wow-delay="0.3s">--}}
-                        {{--<i class="fa fa-exchange flip-icon"></i>--}}
-                        {{--<span>flip to back</span>--}}
-                    {{--</button>--}}
 
-                    {{--<div class="enlarge wow fadeInLeft" data-wow-delay="0.6s">--}}
-                        {{--<a class="front-img popup" href="images/book/book-front-large.png" data-effect="mfp-move-horizontal"></a>--}}
-                        {{--<a class="back-img popup" href="images/book/book-back-large.png" data-effect="mfp-move-horizontal"></a>--}}
-                        {{--<button class="book-button">--}}
-                            {{--<i class="fa fa-expand"></i>--}}
-                            {{--<span>enlarge</span>--}}
-                        {{--</button>--}}
-                    {{--</div>--}}
-
-                    <!-- look inside button -->
-                    {{--<ul id="inline-popups" class="look-inside wow fadeInLeft" data-wow-delay="0.9s">--}}
-                        {{--<li>--}}
-                            {{--<i class="fa fa-search-plus"></i>--}}
-                            {{--<a href="#test-popup" data-effect="mfp-move-horizontal">look inside</a></li>--}}
-                    {{--</ul>--}}
-
-                    <!-- Look Inside Content -->
-                    {{--<div id="test-popup" class="white-popup mfp-with-anim mfp-hide">--}}
-                        {{--<div class="popup-header">--}}
-                            {{--<span class="popup-title">Podcast 101 |</span><span> Master The Art of Conversation and Business</span>--}}
-                        {{--</div>--}}
-                        {{--<div class="white-popup-inner">--}}
-                            {{--<div class="book-wrapper text-center">--}}
-                                {{--<div class="popup-book-page">--}}
-                                    {{--<img src="images/book/book-front-large.png" class="img-responsive" alt='published-img'>--}}
-                                {{--</div>--}}
-                                {{--<div class="popup-book-page">--}}
-                                    {{--<img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>--}}
-                                {{--</div>--}}
-                                {{--<div class="popup-book-page">--}}
-                                    {{--<img src="images/book/page1.jpg" class="img-responsive look-inside-page" alt='published-img'>--}}
-                                {{--</div>--}}
-                                {{--<div class="popup-book-page">--}}
-                                    {{--<img src="images/book/book-back-large.png" class="img-responsive" alt='published-img'>--}}
-                                {{--</div>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-
-
-
-                    {{--<button id="playpausebtn" class="listen book-button wow fadeInLeft" tabindex="0" data-trigger="focus" data-toggle="popover" data-placement="bottom" data-content="You can put your audible book excerpt here" data-wow-delay="1.2s">--}}
-                        {{--<i class="fa fa-play-circle-o"></i>--}}
-                        {{--<span>Listen</span>--}}
-                    {{--</button>--}}
                 </div>
 
 
@@ -148,7 +98,13 @@
 
                     </blockquote>
 
-                    <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">BOOK NOW</a>
+                    @if(session('message'))
+
+                        {{--<div style='position:fixed;top:60%;left:56%;font-weight:bold;font-size: 14px;' id='taxibooked'><h3 class="" style="color: #30ff50;">{{session('message')}} </h3></div>--}}
+                        <div class="text-center"><a href="#" class="btn btn-primary btn-success">{{session('message')}}</a></div>
+                    @else
+                        <a data-scroll href="#what-you-learn" class="buy-now btn btn-block custom-button">BOOK NOW</a>
+                    @endif
 
                 </div>
             </div><!-- End: .container-custom -->
@@ -158,13 +114,7 @@
 
     {{--Thank you message after successful booking --}}
 
-    @if(session('message'))
 
-        <div style='position:fixed;top:60%;left:56%;font-weight:bold;font-size: 14px;' id='taxibooked'><h3 class="" style="color: #30ff50;">{{session('message')}} </h3></div>
-
-
-
-    @endif
 
     <!-- as seen on section starts-->
     <section id="as-seen-on" class="as-seen-on page">
@@ -1001,7 +951,7 @@
             })
         });
 
-        $("#taxibooked").delay(4000).fadeOut();
+        // $("#taxibooked").delay(4000).fadeOut();
 
         var $window = $(window);
 
