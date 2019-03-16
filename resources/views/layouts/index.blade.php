@@ -12,7 +12,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--meta tags ends-->
 
-    <title>Published - Responsive & Interactive Landing Page for Books</title>
+    <title>Transfers Montenegro  |  Podgorica Airport Taxi  |  Montenegro Tours</title>
+
+    <meta name="description" content="With Transfers Montenegro service, tourists can find cheap and reliable transport from airport to their hotel, and make the reservation online.">
 
     <!--- Links to google fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,800%7cCardo:400italic%7cMerriweather:400,300,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -73,6 +75,8 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#hero">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a data-scroll href="#as-seen-on">faq</a></li>
+                        <li><a data-scroll href="#author">contact</a></li>
                         <li><a data-scroll href="#book-trailer">Pricing</a></li>
                         <li><a data-scroll href="#what-you-learn">book now</a></li>
                         {{--<li><a data-scroll href="#book-facts">facts</a></li>--}}
@@ -82,8 +86,9 @@
                         <li><a data-scroll href="#video">video</a></li>
                         <li><a data-scroll href="#reviews">reviews</a></li>
                         <li><a data-scroll href="#bonuses">destinations</a></li>
-                        <li><a data-scroll href="#faq">faq</a></li>
+
                         <li><a data-scroll href="#contributors">top destinations</a></li>
+
 
                     </ul>
                 </div>
@@ -106,11 +111,11 @@
                     <div class="row">
                         <div class="col-xs-6">
                             <div class="footer-link footer-link-1">
-                                <h4>Lorem Ipsum Dolor</h4>
+                                <h4>Contact us</h4>
                                 <ul>
-                                    <li><a href="">Lorem Imsum</a></li>
-                                    <li><a href="">Sit Amet</a></li>
-                                    <li><a href="">Suggest Ipsum</a></li>
+                                    <li><a href="">WhatsUp</a></li>
+                                    <li><a href="">Viber</a></li>
+                                    <li><a href="">Email</a></li>
                                     <li><a href="">View Dolors</a></li>
                                     <li><a href="">Discuss</a></li>
                                     <li><a href="">Lorem Ipsum</a></li>
@@ -119,11 +124,11 @@
                         </div>
                         <div class="col-xs-6">
                             <div class="footer-link footer-link-2">
-                                <h4>Eiusmod tempor</h4>
+                                <h4>Numbers</h4>
                                 <ul>
-                                    <li><a href="">Lorem Imsum</a></li>
-                                    <li><a href="">Sit Amet</a></li>
-                                    <li><a href="">Suggest Ipsum</a></li>
+                                    <li><a href="">+382 67 429 776</a></li>
+                                    <li><a href="">+382 68 549 001</a></li>
+                                    <li><a href="">transfersmne@gmail.com</a></li>
                                     <li><a href="">View Dolors</a></li>
                                     <li><a href="">Discuss</a></li>
                                     <li><a href="">Lorem Ipsum</a></li>
@@ -134,7 +139,7 @@
                 </div>
                 <div class="col-md-5 col-md-offset-1 footer-text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <span>© 2016 Made By Wahid LLC. Crafted lovingly in Dhaka, Bangladesh</span>
+                    {{--<span>© 2016 Made By Wahid LLC. Crafted lovingly in Dhaka, Bangladesh</span>--}}
                 </div>
             </div><!-- End: .row -->
         </div><!-- End: .container-->
